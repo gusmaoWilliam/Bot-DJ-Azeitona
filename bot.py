@@ -1,13 +1,12 @@
 import discord
-import random
 from secreto import auth
-import velha
-import asyncio
+from velha import Velha
 from dado import Dado
+from forca import Forca
 
 client = discord.Client()
-
-NewGame = velha.Velha()
+NewGame = Velha()
+JogoDaForca = Forca()
 
 
 @client.event
@@ -42,6 +41,8 @@ async def on_message(message):
 
     if message.content.lower().startswith("salve"):
         await message.channel.send("Salvado")
+    if message.content.lower().startswith(".forca"):
+        await message.channel.send(JogoDaForca.sendTemplate())
 
 
 @client.event

@@ -59,8 +59,6 @@ class Velha:
     def NovaJogada(self, coordenada, jogador):
         if self.Andamento is False:
             return "Começa um game antes burro"
-
-        print(str(self.jogadas) + self.jogador1 + self.jogador2 + jogador)
         if self.jogadas == 0:
             self.jogador1 = jogador
         elif self.jogadas == 1:
@@ -74,6 +72,8 @@ class Velha:
             if jogador != self.jogador1 and jogador != self.jogador2:
                 return "Entrosa não, vc nem tá no jogo"
 
+        if coordenada[0].isdigit():
+            coordenada = coordenada[::-1]
         if self.validos.count(coordenada) == 0:
             return "Digite uma coordenada valida seu burro!"
 
