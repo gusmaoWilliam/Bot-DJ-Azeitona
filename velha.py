@@ -58,27 +58,27 @@ class Velha:
 
     def NovaJogada(self, coordenada, jogador):
         if self.Andamento is False:
-            return "Começa um game antes burro"
+            return "Começa um game antes burre"
         if self.jogadas == 0:
             self.jogador1 = jogador
         elif self.jogadas == 1:
             if jogador != self.jogador1:
                 self.jogador2 = jogador
             else:
-                return "Não ta vendo que não sua vez retardado?"
+                return "Não ta vendo que não sua vez retardade?"
         else:
             if (self.jogadas % 2 == 0 and jogador == self.jogador2) or (self.jogadas % 2 == 1 and jogador == self.jogador1):
-                return "Não é a vez do burro jogar!"
+                return "Não é a vez de burre jogar!"
             if jogador != self.jogador1 and jogador != self.jogador2:
                 return "Entrosa não, vc nem tá no jogo"
 
         if coordenada[0].isdigit():
             coordenada = coordenada[::-1]
         if self.validos.count(coordenada) == 0:
-            return "Digite uma coordenada valida seu burro!"
+            return "Digite uma coordenada valida sue burre!"
 
         if(self.coord[int(coordenada[1])-1][coordenada[0]] != ' '):
-            return "Você é cego ou só é burro mesmo?"
+            return "Você é cegue ou só é burre mesmo?"
 
         self.coord[int(coordenada[1])-1][coordenada[0]
                                          ] = 'X' if jogador == self.jogador1 else 'O'

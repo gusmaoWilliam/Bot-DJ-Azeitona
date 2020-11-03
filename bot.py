@@ -40,7 +40,7 @@ async def on_message(message):
             await message.channel.send("Deu alguma merda!")
 
     if message.content.lower().startswith("salve"):
-        await message.channel.send("Salvado")
+        await message.channel.send("Um Salve pre " + message.author.name)
     if message.content.lower().startswith(".forca"):
         await message.channel.send(JogoDaForca.sendTemplate())
 

@@ -1,5 +1,5 @@
 class Forca():
-    template = ("JOGO DA FORCA\n" +
+    template = ("JOGO DA FORCA (Em Desenvolvimento)\n" +
                 "\n    -----------" +
                 "\n    |                |" +
                 "\n    |           :eye: :eye: " +
